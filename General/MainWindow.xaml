@@ -1,0 +1,243 @@
+﻿<Window x:Class="General.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:General"
+        mc:Ignorable="d"
+        Title="FUll Stack Application"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid x:Name="login">
+            <Grid.Background>
+                <ImageBrush ImageSource="C:\Users\Dens\source\repos\General\General\Assets\b3.jpg"></ImageBrush>
+            </Grid.Background>
+            <Grid>
+                <Border Style="{StaticResource borderdesign}">
+                    <StackPanel>
+                        <TextBlock Text="Login" Style="{StaticResource heading}"></TextBlock>
+                        <TextBlock Text="Username" Style="{StaticResource loginspan}"></TextBlock>
+                        <TextBox x:Name="usernameinput" Style="{StaticResource logininput}"/>
+                        <TextBlock Text="Email" Style="{StaticResource loginspan}"/>
+                        <TextBox x:Name="emailinput" Style="{StaticResource logininput}"/>
+                        <TextBlock Text="Password" Style="{StaticResource loginspan}"/>
+                        <PasswordBox x:Name="passwordinput" Style="{StaticResource loginpasswordbox}"/>
+                        <TextBlock x:Name="errormessage"  Style="{StaticResource errormessages}"/>
+                        <Button Content="Login" Click="Button_Click" Style="{StaticResource loginbutton}"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="If you Dont Have an Account " Style="{StaticResource noaccounttb}"></TextBlock>
+                            <Button Content="Register" Style="{StaticResource smallbtn}" x:Name="gotoregister" Click="gotoregister_Click"></Button>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <Border x:Name="showdata" Style="{StaticResource showdatastyle}">
+                    <StackPanel>
+                        <TextBlock Style="{StaticResource heading}" Text="Submitted user Data.."></TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="UserName" Style="{StaticResource loginspan}"></TextBlock>
+                            <TextBlock x:Name="UserNameData" Foreground="White" FontWeight="Bold"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Email" Style="{StaticResource loginspan}"/>
+                            <TextBlock x:Name="EmailData" Foreground="White" FontWeight="Bold"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Password" Style="{StaticResource loginspan}"/>
+                            <TextBlock x:Name="PasswordData" Foreground="White" FontWeight="Bold"/>
+                        </StackPanel>
+                        <Button Content="OK" Style="{StaticResource loginbutton}" Click="Button_Click_1"></Button>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Grid>
+        <Grid x:Name="register">
+            <Grid.Background>
+                <ImageBrush ImageSource="C:\Users\Dens\source\repos\General\General\Assets\b3.jpg"></ImageBrush>
+            </Grid.Background>
+            <Border Style="{StaticResource borderdesign}">
+                <StackPanel>
+                    <TextBlock Text="Register" Style="{StaticResource heading}"/>
+                    <TextBlock Text="Name"  Style="{StaticResource loginspan}"/>
+                    <TextBox x:Name="NameInput" Style="{StaticResource logininput}"/>
+                    <TextBlock Text="Email"  Style="{StaticResource loginspan}"/>
+                    <TextBox x:Name="EmailInput" Style="{StaticResource logininput}"/>
+                    <TextBlock Text="Password"  Style="{StaticResource loginspan}"/>
+                    <PasswordBox x:Name="PasswordInput" Style="{StaticResource loginpasswordbox}"/>
+                    <TextBlock Text="Confirm Password"  Style="{StaticResource loginspan}"/>
+                    <PasswordBox x:Name="C_PasswordInput" Style="{StaticResource loginpasswordbox}"/>
+                    <TextBlock x:Name="error" Style="{StaticResource errormessages}"/>
+                    <Button x:Name="RegisterButton" Content="Register" Style="{StaticResource loginbutton}" Click="Button_Click_2"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Aldready Have An Account" Style="{StaticResource noaccounttb}"/>
+                        <Button Content="Login" Style="{StaticResource smallbtn}" x:Name="gotologin" Click="gotologin_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <Border x:Name="showdatas" Style="{StaticResource showdatastyle}">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource heading}" Text="Submitted user Data.."></TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="UserName" Style="{StaticResource loginspan}"></TextBlock>
+                        <TextBlock x:Name="UserNameDatas" Foreground="White" FontWeight="Bold"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Email" Style="{StaticResource loginspan}"/>
+                        <TextBlock x:Name="EmailDatas" Foreground="White" FontWeight="Bold"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Password" Style="{StaticResource loginspan}"/>
+                        <TextBlock x:Name="PasswordDatas" Foreground="White" FontWeight="Bold"/>
+                    </StackPanel>
+                    <Button Content="OK" Style="{StaticResource loginbutton}" Click="Button_Click_1"></Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Grid x:Name="home">
+            <Grid.Background>
+                <ImageBrush ImageSource="C:\Users\Dens\source\repos\General\General\Assets\b4.webp">
+                    
+                </ImageBrush>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="260"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" Style="{StaticResource sidebar}">
+                <StackPanel  VerticalAlignment="Center">
+                    <Border Width="120" Height="120" CornerRadius="80" Margin="10">
+                        <Border.Background>
+                            <ImageBrush ImageSource='C:\Users\Dens\source\repos\General\General\Assets\user.png'/>
+                        </Border.Background>
+                    </Border>
+                    <TextBlock x:Name="displayName"
+           Text="Welcome User!"
+           Style="{StaticResource heading}"
+           Margin="0,0,0,100"/>
+                    <Button Content="TODO" Style="{StaticResource sidebarbtn}" x:Name="todoButton" Click="todo_Click"/>
+                    <Button Content="Calculater" Style="{StaticResource sidebarbtn}" x:Name="calcButton" Click="calcButton_Click"/>
+                    <Button Content="Currency Converter" Style="{StaticResource sidebarbtn}" x:Name="currency" Click="currency_Click"/>
+                    <Button Content="Timmer" Style="{StaticResource sidebarbtn}"/>
+                    <Button Content="Stop Watch" Style="{StaticResource sidebarbtn}"/>
+                    <Button Content="NoteBook" Style="{StaticResource sidebarbtn}"/>
+                    <Button Content="Remainder" Style="{StaticResource sidebarbtn}"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Grid x:Name="todo" Visibility="Collapsed">
+         
+                <Border Width="1000" Background="#36454F" Opacity="0.8" Height="1000" CornerRadius="10" HorizontalAlignment="Right" Margin="100" VerticalAlignment="Top">
+                <StackPanel>
+                    <TextBlock Text="TODO" Style="{StaticResource heading}"/>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBox Width="800" Height="60" Style="{StaticResource todoinput}"  x:Name="todoInput"/>
+                        <Button Style="{StaticResource todobutton}" Content="Add + " Click="Button_Click_3"/>
+
+                    </StackPanel>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+              VerticalScrollBarVisibility="Disabled"
+              Height="220"
+              Margin="0,20,0,20">
+
+                        <StackPanel x:Name="todoContainer"
+                Orientation="Vertical"
+                 Margin="10"
+            
+                HorizontalAlignment="Left">
+                        </StackPanel>
+
+                    </ScrollViewer>
+                </StackPanel>
+            </Border>
+           
+        </Grid>
+        <Grid x:Name="calculater" Visibility="Collapsed">
+            <Border Style="{StaticResource calculaterBorder}">
+                <StackPanel>
+                    <TextBlock Text="Calculater" Style="{StaticResource heading}"/>
+                    <StackPanel Orientation="Horizontal" Style="{StaticResource calsub}">
+                        <TextBlock Text="Addition" Style="{StaticResource calcheading}"/>
+                        <TextBox Style="{StaticResource calcinput}" x:Name="add1"/>
+                        <TextBox Style="{StaticResource calcinput}" x:Name="add2"/>
+                        <Button Content="Add" Style="{StaticResource calcbutton}" x:Name="addbtn" Click="addbtn_Click"/>
+                        
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Style="{StaticResource calsub}">
+                        <TextBlock Text="Substarction" Style="{StaticResource calcheading}"/>
+                        <TextBox Style="{StaticResource calcinput}" x:Name="sub1"/>
+                        <TextBox Style="{StaticResource calcinput}" x:Name="sub2"/>
+                        <Button Content="Subtarct" Style="{StaticResource calcbutton}"  x:Name="subbtn" Click="subbtn_Click" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Style="{StaticResource calsub}">
+                        <TextBlock Text="Multiplication" Style="{StaticResource calcheading}"/>
+                        <TextBox Style="{StaticResource calcinput}" x:Name="mul1"/>
+                        <TextBox Style="{StaticResource calcinput}" x:Name="mul2"/>
+                        <Button Content="Multiply" Style="{StaticResource calcbutton}" x:Name="mulbtn" Click="mulbtn_Click"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Style="{StaticResource calsub}">
+                        <TextBlock Text="Devision" Style="{StaticResource calcheading}"/>
+                        <TextBox Style="{StaticResource calcinput}" x:Name="div1"/>
+                        <TextBox Style="{StaticResource calcinput}" x:Name="div2"/>
+                        <Button Content="Divide" Style="{StaticResource calcbutton}" x:Name="divbtn" Click="divbtn_Click"/>
+                    </StackPanel>
+                    <TextBlock x:Name="calcres" Style="{StaticResource calcresult}"  />
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Grid x:Name="currencyConverter" Visibility="Collapsed">
+            <Border Style="{StaticResource currencyBorder}">
+                <StackPanel Margin="15">
+                    <!-- Header Title -->
+                    <TextBlock Text="Currency Converter" 
+                      Style="{StaticResource heading}"/>
+
+                    <!-- From / To Selection Dropdowns -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,15">
+                        <ComboBox x:Name="FromCurrencyBox" Width="160" Margin="5">
+                            <ComboBoxItem Content="AUD - Australian Dollar"/>
+                            <ComboBoxItem Content="CAD - Canadian Dollar"/>
+                            <ComboBoxItem Content="CNY - Chinese Yuan"/>
+                            <ComboBoxItem Content="EUR - Euro"/>
+                            <ComboBoxItem Content="GBP - British Pound"/>
+                            <ComboBoxItem Content="INR - Indian Rupee" IsSelected="True"/>
+                            <ComboBoxItem Content="JPY - Japanese Yen"/>
+                            <ComboBoxItem Content="NZD - New Zealand Dollar"/>
+                            <ComboBoxItem Content="SGD - Singapore Dollar"/>
+                            <ComboBoxItem Content="USD - US Dollar"/>
+                        </ComboBox>
+
+                        <TextBlock Text="➔" VerticalAlignment="Center" Margin="10,0" FontSize="16"/>
+
+                        <ComboBox x:Name="ToCurrencyBox" Width="160" Margin="5">
+                            <ComboBoxItem Content="AUD - Australian Dollar"/>
+                            <ComboBoxItem Content="CAD - Canadian Dollar"/>
+                            <ComboBoxItem Content="CNY - Chinese Yuan"/>
+                            <ComboBoxItem Content="EUR - Euro"/>
+                            <ComboBoxItem Content="GBP - British Pound"/>
+                            <ComboBoxItem Content="INR - Indian Rupee"/>
+                            <ComboBoxItem Content="JPY - Japanese Yen"/>
+                            <ComboBoxItem Content="NZD - New Zealand Dollar"/>
+                            <ComboBoxItem Content="SGD - Singapore Dollar"/>
+                            <ComboBoxItem Content="USD - US Dollar" IsSelected="True"/>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <!-- Amount Input Field -->
+                    <StackPanel Margin="0,0,0,15" HorizontalAlignment="Center">
+                        <TextBlock Text="Amount to Convert:" Margin="5,0,5,5"/>
+                        <TextBox x:Name="AmountInput" Width="350" Height="30" VerticalContentAlignment="Center" Padding="5,0"/>
+                    </StackPanel>
+
+                    <!-- Conversion Action Button -->
+                    <Button x:Name="ConvertButton" Content="Convert" Width="120" Height="35" Click="ConvertButton_Click" Margin="0,0,0,15"/>
+
+                    <!-- Result Display Block -->
+                    <Border Background="#F0F0F0" CornerRadius="4" Padding="10" Width="350">
+                        <TextBlock x:Name="ResultText" Text="Result: --" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+    </Grid>
+</Window>

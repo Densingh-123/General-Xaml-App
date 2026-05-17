@@ -1,0 +1,16 @@
+C:\Users\Dens\source\repos\General\General\obj\Debug\General.csproj.AssemblyReference.cache
+C:\Users\Dens\source\repos\General\General\obj\Debug\App.g.cs
+C:\Users\Dens\source\repos\General\General\obj\Debug\General_MarkupCompile.cache
+C:\Users\Dens\source\repos\General\General\bin\Debug\General.exe.config
+C:\Users\Dens\source\repos\General\General\bin\Debug\General.exe
+C:\Users\Dens\source\repos\General\General\bin\Debug\General.pdb
+C:\Users\Dens\source\repos\General\General\obj\Debug\MainWindow.g.cs
+C:\Users\Dens\source\repos\General\General\obj\Debug\General_MarkupCompile.lref
+C:\Users\Dens\source\repos\General\General\obj\Debug\MainWindow.baml
+C:\Users\Dens\source\repos\General\General\obj\Debug\General.g.resources
+C:\Users\Dens\source\repos\General\General\obj\Debug\General.Properties.Resources.resources
+C:\Users\Dens\source\repos\General\General\obj\Debug\General.csproj.GenerateResource.cache
+C:\Users\Dens\source\repos\General\General\obj\Debug\General.csproj.CoreCompileInputs.cache
+C:\Users\Dens\source\repos\General\General\obj\Debug\General.exe
+C:\Users\Dens\source\repos\General\General\obj\Debug\General.pdb
+C:\Users\Dens\source\repos\General\General\obj\Debug\App.baml
